@@ -1,3 +1,4 @@
 /node_modules
 /lib/sample.csv
 /lib/script.js
+.nyc_output

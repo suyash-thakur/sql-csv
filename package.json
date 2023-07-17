@@ -11,7 +11,8 @@
     "axios": "^1.4.0",
     "csv-parser": "^3.0.0",
     "csvtojson": "^2.0.10",
-    "pg": "^8.11.0"
+    "pg": "^8.11.0",
+    "tap": "^16.3.7"
   },
   "directories": {
     "lib": "lib"
