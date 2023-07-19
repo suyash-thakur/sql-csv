@@ -3,7 +3,7 @@ const CSVDatabase = require('../lib/index');
 const fs = require('fs');
 const path = require('path');
 
-const csvFilePath = path.join(__dirname, 'test.csv');
+const csvFilePath = path.join(__dirname, 'data.csv');
 
 tap.test('CSVDatabase', async (t) => {
     // Create a temporary CSV file for testing
@@ -14,15 +14,8 @@ tap.test('CSVDatabase', async (t) => {
     ];
     await createTestCSV(csvFilePath, testData);
 
-    t.test('loadCSV - Loads data from CSV file', async (t) => {
-        const database = new CSVDatabase(csvFilePath);
-        await database.loadCSV();
-        t.equal(database.isLoaded, true, 'CSV file is loaded');
-        t.equal(database.data.length, testData.length, 'Data is loaded correctly');
-    });
-
     t.test('query - Executes SQL query', async (t) => {
-        const database = new CSVDatabase(csvFilePath);
+        const database = new CSVDatabase([csvFilePath]);
 
         const sql = 'SELECT * FROM data WHERE age > 25';
         const result = await database.query(sql);
