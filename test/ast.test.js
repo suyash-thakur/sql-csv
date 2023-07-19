@@ -28,7 +28,6 @@ tap.test('AST', (t) => {
         ];
 
         const ast = new AST(tokens);
-        console.dir(ast, { depth: null });
         t.equal(ast.select.length, 2, 'Correct number of select columns');
         t.equal(ast.select[0].type, 'column', 'First select column has correct type');
         t.equal(ast.select[0].name, 'column1', 'First select column has correct name');
