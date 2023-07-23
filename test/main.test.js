@@ -19,13 +19,23 @@ tap.test('CSVDatabase', async (t) => {
 
         const sql = 'SELECT * FROM data WHERE age > 25';
         const result = await database.query(sql);
-
+        console.log(result);
         t.equal(result.length, 2, 'Query result contains correct number of rows');
         t.equal(result[0].name[0], 'Jane', 'Query result contains correct data');
         t.equal(result[1].name[0], 'Bob', 'Query result contains correct data');
     });
 
     // Add more tests as needed
+
+    t.test('query - Executes SQL query', async (t) => {
+        const database = new CSVDatabase([csvFilePath]);
+
+        const sql = 'SELECT SUM(age) as total_age FROM data';
+        const result = await database.query(sql);
+        console.log(result);
+        t.equal(result.length, 1, 'Query result contains correct number of rows');
+        t.equal(result[0].total_age[0], '90', 'Query result contains correct data');
+    });
 
     // Clean up the temporary CSV file after all tests have finished
     t.teardown(() => {
