@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "csv-parser": "^3.0.0"
-   },
+  },
   "devDependencies": {
     "tap": "^16.3.7"
   },

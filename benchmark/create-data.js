@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const numberOfRows = 100000; // Adjust this number as needed
+const numberOfRows = 1000; // Adjust this number as needed
 const numberOfColumns = 10;  // Adjust this number as needed
 
 function generateRandomRow() {
