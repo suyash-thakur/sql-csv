@@ -1,6 +1,6 @@
-# csv-sql
+# sql-csv
 
-`csv-sql` is a simple library that allows you to run SQL queries on CSV files.
+`sql-csv` is a simple library that allows you to run SQL queries on CSV files.
 
 ## Table of Contents
 
@@ -13,15 +13,15 @@
 
 ## Installation
 
-You can install `csv-sql` using npm: `npm install csv-sql`
+You can install `sql-csv` using npm: `npm install sql-csv`
 
 
 ## Usage
 
-To use `csv-sql`, you first need to create a new instance of the `CsvSql` class:
+To use `sql-csv`, you first need to create a new instance of the `CsvSql` class:
 
 ```javascript
-const CsvSql = require('csv-sql');
+const CsvSql = require('sql-csv');
 
 const csvSql = new CsvSql('path/to/csv/file.csv');
 ```
@@ -50,7 +50,7 @@ const result = await csvSql.query('SELECT * FROM file WHERE column1 = "value"');
 
 ## Supported SQL Syntax
 
-`csv-sql` supports a subset of the SQL syntax. The following SQL statements are supported:
+`sql-csv` supports a subset of the SQL syntax. The following SQL statements are supported:
 
 - `SELECT`
 - `FROM`
