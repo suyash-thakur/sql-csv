@@ -2,3 +2,4 @@
 /lib/sample.csv
 /lib/script.js
 .nyc_output
+/benchmark/largeData.csv
