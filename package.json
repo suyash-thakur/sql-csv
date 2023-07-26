@@ -1,7 +1,8 @@
 {
-  "name": "csv-sql",
+  "name": "sql-csv",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "A simple library to run sql queries on csv files",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,8 +15,21 @@
   "devDependencies": {
     "tap": "^16.3.7"
   },
+  "author": "suyash-thakur",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suyash-thakur/sql-csv.git"
+    },
+  "homepage": "https://github.com/suyash-thakur/sql-csv.git#readme",
+  "bugs": {
+    "url": "https://github.com/suyash-thakur/sql-csv.git/issues",
+    "email": "suyashthakur910@gmail.com"
+  },
   "directories": {
     "lib": "lib"
   },
-  "description": "This is a simple csv to sql converter that takes a csv file and allows you to run sql queries on it"
+  "files": [
+    "lib"
+  ]
 }
